@@ -1,0 +1,17 @@
+DESKTOP KISAYOLU OLUŞTURMA TALİMATI:
+
+1. Masaüstünüze sağ tıklayın
+2. "Yeni" > "Kısayol" seçin
+3. Hedef kısmına şunu yazın:
+
+Windows için:
+cmd /c "cd /d C:\TradingJournal\trading-journal && npm start"
+
+(Not: C:\TradingJournal kısmını kendi proje klasörünüzün yolu ile değiştirin)
+
+4. İsim: "Trading Journal"
+5. İkon değiştirmek için: Kısayola sağ tıklayın > Özellikler > İkonu Değiştir
+
+=== VEYA BU BATCH DOSYASINI KULLANIN ===
+
+Sadece trading-journal klasöründeki "start.bat" dosyasına çift tıklayın!
