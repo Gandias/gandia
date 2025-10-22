@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Journal - Başlatıcı</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .instructions {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 5px 0;
+        }
+        .warning {
+            background: rgba(255, 193, 7, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📊</div>
+        <h1>Trading Journal</h1>
+        <p>TradeZella tarzında profesyonel trading takip uygulaması</p>
+        
+        <div class="warning">
+            <strong>⚠️ Önemli:</strong> Uygulamayı başlatmak için önce Node.js yüklü olmalı!
+        </div>
+
+        <button class="button" onclick="openApp()">🚀 Uygulamayı Başlat</button>
+        <button class="button" onclick="openFolder()">📁 Klasörü Aç</button>
+
+        <div class="instructions">
+            <h3>📋 Kullanım Talimatları:</h3>
+            <div class="step"><strong>Yöntem 1:</strong> <code>start.bat</code> dosyasına çift tıklayın (Windows)</div>
+            <div class="step"><strong>Yöntem 2:</strong> <code>start.sh</code> dosyasını çalıştırın (Linux/Mac)</div>
+            <div class="step"><strong>Yöntem 3:</strong> Terminal'de <code>npm start</code> komutunu çalıştırın</div>
+            <div class="step"><strong>Tarayıcı:</strong> Uygulama otomatik olarak <code>http://localhost:3000</code> adresinde açılacak</div>
+        </div>
+
+        <div style="margin-top: 30px; font-size: 14px; opacity: 0.8;">
+            <p>💡 Uygulama başladıktan sonra tarayıcınızda otomatik olarak açılacaktır.</p>
+            <p>🔧 Sorun yaşarsanız, terminal/komut satırında <code>npm install</code> komutunu çalıştırın.</p>
+        </div>
+    </div>
+
+    <script>
+        function openApp() {
+            alert('Lütfen trading-journal klasöründeki "start.bat" (Windows) veya "start.sh" (Linux/Mac) dosyasına çift tıklayın!');
+        }
+
+        function openFolder() {
+            alert('Trading-journal klasörünü açın ve start.bat dosyasına çift tıklayın!');
+        }
+
+        // Otomatik yönlendirme
+        setTimeout(function() {
+            if(confirm('Trading Journal uygulamasını başlatmak istiyor musunuz?\n\nEvet\'e tıklarsanız, lütfen açılan terminal penceresini kapatmayın.')) {
+                window.location.href = 'http://localhost:3000';
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
